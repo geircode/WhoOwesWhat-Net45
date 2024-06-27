@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E25A1C63-BEE4-4940-B5A2-DE25BF3C8FC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WhoOwesWhat.Tests</RootNamespace>
+    <AssemblyName>WhoOwesWhat.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Fixie">
+      <HintPath>..\packages\Fixie.1.0.0.11\lib\net45\Fixie.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\packages\FluentAssertions.3.2.1\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core">
+      <HintPath>..\packages\FluentAssertions.3.2.1\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.NamedScope, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.Extensions.NamedScope.3.2.0.0\lib\net45-full\Ninject.Extensions.NamedScope.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.MockingKernel">
+      <HintPath>..\packages\Ninject.MockingKernel.3.2.1.0\lib\net45-full\Ninject.MockingKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.MockingKernel.Moq">
+      <HintPath>..\packages\Ninject.MockingKernel.Moq.3.2.1.0\lib\net45-full\Ninject.MockingKernel.Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.8.0.0\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.1.2\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.1.2\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataProvider\FriendTests\Query\GetFriendsTests.cs" />
+    <Compile Include="DataProvider\PostTests\Command\SavePostTests.cs" />
+    <Compile Include="DataProvider\PostTests\PostDataproviderLogicTests.cs" />
+    <Compile Include="DataProvider\PersonTests\Command\SavePersonTests.cs" />
+    <Compile Include="DataProvider\PersonTests\PersonDataproviderLogicTests.cs" />
+    <Compile Include="DataProvider\PersonTests\Query\GetPersonTests.cs" />
+    <Compile Include="DataProvider\PersonTests\Query\PersonQueryTests.cs" />
+    <Compile Include="DataProvider\UserCredentialDataproviderLogicTests.cs" />
+    <Compile Include="DataProvider\UserCredentialDataproviderGetUserCredentialsTests.cs" />
+    <Compile Include="DataProvider\UserCredentialDataproviderSaveUserTests.cs" />
+    <Compile Include="DataProvider\UserCredentialDataproviderTests.cs" />
+    <Compile Include="DataProvider\UserDataProviderFixieTests.cs" />
+    <Compile Include="Domain\FriendRepository\SyncOnlineFriendTests.cs" />
+    <Compile Include="Domain\FriendRepository\GetFriendsToAppTests.cs" />
+    <Compile Include="Domain\FriendRepository\DeleteOfflineFriendLogicTests.cs" />
+    <Compile Include="Domain\FriendRepository\SyncOfflineFriendTests.cs" />
+    <Compile Include="Domain\FriendrequestRepository\AcceptFriendrequestTests.cs" />
+    <Compile Include="Domain\FriendrequestRepository\GetFriendrequestsTests.cs" />
+    <Compile Include="Domain\PostRepository\SyncPostsQueryTests.cs" />
+    <Compile Include="Domain\PostRepository\SyncPostsTests.cs" />
+    <Compile Include="Domain\UserRepository\AuthenticateUserTests.cs" />
+    <Compile Include="Domain\FriendrequestRepository\SendFriendrequestTests.cs" />
+    <Compile Include="Domain\UserRepository\UserRepositoryLogicTests.cs" />
+    <Compile Include="Domain\UserRepository\CreateUserTests.cs" />
+    <Compile Include="Service.Controller\FriendrequestControllerAcceptFriendrequestTests.cs" />
+    <Compile Include="Service.Controller\FriendrequestControllerGetFriendRequestTests.cs" />
+    <Compile Include="Service.Controller\SyncControllerTest_SyncPost.cs" />
+    <Compile Include="Service.Controller\SyncControllerTest_SyncToApp.cs" />
+    <Compile Include="Service.Controller\SyncControllerTest_SyncOfflineFriend.cs" />
+    <Compile Include="Service.Controller\FriendrequestControllerSendFriendRequestTests.cs" />
+    <Compile Include="Service.Controller\UserControllerGetPersonTests.cs" />
+    <Compile Include="Service.Controller\UserControllerAuthenticationTests.cs" />
+    <Compile Include="TestGroupQuery.cs" />
+    <Compile Include="TestPersonQuery - Copy.cs" />
+    <Compile Include="TestPersonQuery.cs" />
+    <Compile Include="TestPostQuery.cs" />
+    <Compile Include="UserTestsNunit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WhoOwesWhat.DataProvider.Interfaces\WhoOwesWhat.DataProvider.Interfaces.csproj">
+      <Project>{e00e3b01-5cf9-43e0-874e-4639b8e9ea67}</Project>
+      <Name>WhoOwesWhat.DataProvider.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.DataProvider\WhoOwesWhat.DataProvider.csproj">
+      <Project>{39d03349-b21c-4271-85d9-3f6601fda3d2}</Project>
+      <Name>WhoOwesWhat.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Domain.DTO\WhoOwesWhat.Domain.DTO.csproj">
+      <Project>{8e4eeaae-0e02-4388-8ae5-4386b217fdb4}</Project>
+      <Name>WhoOwesWhat.Domain.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Domain.Interfaces\WhoOwesWhat.Domain.Interfaces.csproj">
+      <Project>{5f0030bc-5182-433f-a461-5ac4c5c0b23f}</Project>
+      <Name>WhoOwesWhat.Domain.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Domain\WhoOwesWhat.Domain.csproj">
+      <Project>{648faca6-3552-4987-8cd3-89366889165c}</Project>
+      <Name>WhoOwesWhat.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Ninject\WhoOwesWhat.Ninject.csproj">
+      <Project>{925b3d33-a399-4cc3-b1db-b6b52dcc3644}</Project>
+      <Name>WhoOwesWhat.Ninject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Service.Controller\WhoOwesWhat.Service.Controller.csproj">
+      <Project>{2b707fad-8824-41dd-b348-d9120c39b5e6}</Project>
+      <Name>WhoOwesWhat.Service.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Service.DTO\WhoOwesWhat.Service.DTO.csproj">
+      <Project>{979e7256-5dd5-486d-b950-b53447e7da64}</Project>
+      <Name>WhoOwesWhat.Service.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoOwesWhat.Service\WhoOwesWhat.Service.csproj">
+      <Project>{BDAF78C8-6DF6-4450-9D80-D2C406001393}</Project>
+      <Name>WhoOwesWhat.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataProvider\PostTests\Query\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

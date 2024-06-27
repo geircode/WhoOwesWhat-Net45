@@ -1,0 +1,9 @@
+﻿Logic-filer skal understøtte sine egne klasser og kan ikke bruke injected kode
+Logic klasser gjør det mulig å unitteste Repositories med mer kompleks kode	
+
+
+DataProvider
+UpdateEntity:
+	- oppdaterer Entity Framework objektet med endringer før SaveChanges()
+MapToDomain:
+	- lager et nytt Domain objekt ut i fra Entity objektet

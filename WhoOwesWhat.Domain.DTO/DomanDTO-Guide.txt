@@ -1,0 +1,2 @@
+﻿
+Parameterklasser slik som SyncPostModel skal kun brukes for å sende data _til_ en funksjon. Andre funksjoner skal ikke plutselig returnere denne klassen.

@@ -1,0 +1,44 @@
+﻿@using WhoOwesWhat.Domain.DTO;
+@using System.Linq;
+@using System.Collections.Generic;
+@using WhoOwesWhat.NancyServer
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<List<Error>>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>WhoOwesWhat.NancyServer</title>
+
+    <style type="text/css">
+
+    </style>
+    @*<script src="http://chrisakers.github.io/json-view/javascripts/bttf_json.js"></script>
+        <script src="http://chrisakers.github.io/json-view/json-view.js"></script>*@
+
+
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    @{
+        foreach (Error error in Model)
+        {
+            <div style="padding-top: 8px">
+                <div class="panel panel-info" style="margin: 8px">
+                    <b>@error.Created.ToNorwegianDate()</b>
+                    <div class="panel-heading">@error.Message</div>
+                    <div class="panel-body">
+                        @error.ErrorJson
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+
+</body>
+</html>
