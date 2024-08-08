@@ -156,12 +156,12 @@ $RECYCLE.BIN/
 .DS_Store
 
 
-# =========================
-# Garg files. In sync with Dropbox.
-# =========================
 /.git.7z
 /.git_pakkUtZipForÅFå.gyldig.git repo.txt
 /packages
 /WhoOwesWhat.sln.DotSettings
 /WhoOwesWhat_CodeInsight.png
 /WhoOwesWhat_CQRS.zip
+
+.vs/
+*.dtbcache.json
